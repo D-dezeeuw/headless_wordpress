@@ -25,11 +25,12 @@ const GET_POST_BY_SLUG = gql`
 `;
 
 export default function PostPage(props) {
+  // console.log('PROPS', props);
   const { loading, error, data } = useQuery(GET_POST_BY_SLUG, {
     variables: {
-      id: props.match.params.slug
+      id: props?.match?.params?.slug || 'unknown'
     }
-  });
+  })
 
   const postFound = Boolean(data?.post);
 
