@@ -1,21 +1,42 @@
-# React Router Example
+# Nuxt 3 Minimal Starter
 
-How to make a Single Page Application with React Router.
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-### [View Tutorial](https://www.taniarascia.com/using-react-router-spa)
+## Setup
 
-## Purpose
+Make sure to install the dependencies:
 
-Set up a router in React.
+```bash
+# yarn
+yarn install
 
-- `/` - root
-- `/:page_id` - page
-- `/categories/:category_id` - category
+# npm
+npm install
 
-## Author
+# pnpm
+pnpm install --shamefully-hoist
+```
 
-- [Tania Rascia](https://www.taniarascia.com)
+## Development Server
 
-## License
+Start the development server on http://localhost:3000
 
-This project is open source and available under the [MIT License](LICENSE).
+```bash
+npm run dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+npm run build
+```
+
+Locally preview production build:
+
+```bash
+npm run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

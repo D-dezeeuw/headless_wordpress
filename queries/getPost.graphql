@@ -1,0 +1,28 @@
+query getPost {
+  post(id: "44", idType: DATABASE_ID) {
+    content
+  }
+}
+
+query GetAllPosts{
+  posts(where: {categoryName: "All"}) {
+      nodes {
+        databaseId
+        title
+        date
+        slug
+        author {
+          node {
+            name
+          }
+        }
+        featuredImage {
+          node {
+            altText
+            sourceUrl
+          }
+        }
+      }
+    }
+  }
+}
