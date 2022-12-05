@@ -1,8 +1,7 @@
 <template>
-	<h1>About</h1>
-
-	<hr />
-    <nuxt-link to="/post">post</nuxt-link><br />
-    <nuxt-link to="/post">about</nuxt-link><br />
-    <nuxt-link to="/">home</nuxt-link><br />
+    <AppHeader page="about" />
+    <hr />
+    <div>
+        <p>This is a paragraph about us page.</p>
+    </div>
 </template>

@@ -4,23 +4,39 @@ query getPost {
   }
 }
 
-query GetAllPosts{
-  posts(where: {categoryName: "All"}) {
-      nodes {
-        databaseId
-        title
-        date
-        slug
-        author {
-          node {
-            name
-          }
+# query GetAllPosts{
+#   posts(where: {categoryName: "interventions"}) {
+#       nodes {
+#         databaseId
+#         title
+#         featuredImage {
+#           node {
+#             altText
+#             sourceUrl
+#             mediaItemUrl
+#             srcSet
+#           }
+#         }
+#       }
+#     }
+#   }
+# }
+
+query getAllPosts {
+  posts(where: {categoryName: "interventions"}) {
+    nodes {
+      databaseId
+      title
+      featuredImage {
+        node {
+          mediaItemUrl
         }
-        featuredImage {
-          node {
-            altText
-            sourceUrl
-          }
+      }
+      categories {
+        nodes {
+          name
+          id
+          description
         }
       }
     }

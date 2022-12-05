@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-	modules: ['@nuxtjs/apollo'],
+	modules: ['@nuxtjs/apollo', '@pinia/nuxt', '@nuxtjs/tailwindcss'],
+	components: true,
   apollo: {
     clients: {
 			default: {
@@ -8,4 +9,21 @@ export default defineNuxtConfig({
 			}
     },
   },
+  css: ["@/assets/styles/main.scss"],
+	vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+					additionalData: '@import "@/assets/styles/_variables.scss";'
+        }
+      }
+    }
+  },
+  app: {
+    head: {
+      link: [
+        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lato' }
+      ]
+    }
+  }
 });
