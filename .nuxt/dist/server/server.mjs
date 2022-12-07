@@ -1,0 +1,1 @@
+export { default } from "file:///Users/ddezeeuw/MEGAsync/projects/headless_wordpress/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"
